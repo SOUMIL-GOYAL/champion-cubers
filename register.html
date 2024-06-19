@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CHAMPION CUBERS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="realfavicon.svg" />
+    <link rel="stylesheet" type="text/css" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css">
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <i class="fas fa-bars"></i> </button>
+                <a class="navbar-brand" href="#top"><img id="toplogo" src="realfavicon.svg"><u>CHAMPION CUBERS</u></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#top">REGISTER</a></li>
+                    <li><a href="students.html">STUDENTS ONLY</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="topdiv" class="subheader text-center container-fluid">
+        <h1>Register For Champion Cubers</h1>
+        <p id="registersubtitle">You're only a few clicks away from unlocking your speedcubing talent.</p>
+        <div id="registergrid">
+            <div class="registeritem">
+                <div class="front">
+                    <h3>Champion Cubers Camps</h3>
+                    <div class="registerlist">
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fal fa-phone-laptop"></i></span>In-person or virtual classes.</li>
+                            <li><span class="fa-li"><i class="fal fa-clock"></i></span>More time per session.</li>
+                            <li><span class="fa-li"><i class="fal fa-graduation-cap"></i></span>Tansition to advanced classes.</li>
+                            <li><span class="fa-li"><i class="fal fa-diploma"></i></span>Certificate provided on completion.</li>
+                            <li><span class="fa-li"><i class="fal fa-users"></i></span>Make new friends</li>
+                            <li><span class="fa-li"><i class="bad fal fa-ruler"></i></span>Limited number of classes.</li>
+                            <li><span class="fa-li"><i class="bad fal fa-turtle"></i></span>Starts at beginer level.</li>
+                            <li><span class="fa-li"><i class="bad fal fa-calendar-alt"></i></span>Group scheduling.</li>
+                            <li><span class="fa-li"><i class="bad fal fa-people-arrows"></i></span>Age limits based on group's age.</li>
+                        </ul>
+                    </div>
+                    <div class="registerfooter">
+                        <h5>Next Camp On: </h5>
+                        <h4>$50 per camp</h4>
+                        <a class="flipper" href="#">Sign Up for a Champion Cubers Camp</a>
+                    </div>
+                </div>
+                <div class="back">
+                    <i class="backflipper fas fa-long-arrow-left"></i>
+                    <form action="register.php" method="post" name="registercamp" id="registergroup">
+
+                        <!--<label for="grouppresent">
+							Do you have your own group of students for this class, or would you like to join an exhisting class?
+						</label>
+                        <br>
+                        <input type="radio" class="notblank" id="groupnotpresent" name="grouppresent" value="groupnotpresent" checked>
+                        <label for="groupnotpresent">I would like to join an exhisting Champion Cubers group class.</label>
+                        <br>
+                        <input type="radio" class="notblank" id="groupispresent" name="grouppresent" value="groupispresent">
+                        <label for="groupispresent">I already have a group of students for the group class.</label>
+                        <br>-->
+
+                        <div id="groupnotpresentselected">
+                            <h5><u><b>Please complete all fields marked with an asterisk (*) to continue.</b></u></h5>
+
+                            <label for="studentname">Student Name:*</label>
+                            <br>
+                            <input name="studentname" type="text" class="notblank" id="campstudentname">
+                            <br>
+                            <br>
+
+                            <label for="studentage">Student Age:*</label>
+                            <br>
+                            <input name="studentage" type="text" class="notblank numcheck" id="campstudentage">
+                            <br>
+                            <br>
+
+                            <label for="parentname">Parent Name:*</label>
+                            <br>
+                            <input name="parentname" type="text" class="notblank" id="campparentname">
+                            <br>
+                            <br>
+
+                            <label for="parentemail">Parent E-Mail:*</label>
+                            <br>
+                            <input name="parentemail" type="text" class="notblank emailcheck" id="campparentemail">
+                            <br>
+                            <br>
+
+                            <label for="parentnumber">Parent Number:*</label>
+                            <br>
+                            <input name="parentnumber" type="text" class="trigger notblank phonenumber" id="groupparentnumber">
+                            <br>
+                            <br>
+                        </div>
+
+                        <div id="groupispresentselected">
+
+                        </div>
+
+                        <div class="allrest">
+
+
+                            <label for="cchoice">
+							Each student will need to have their own 3x3x3 speedcube for the classes. We have the option for you to bring your own speedcube (no extra fees), or you can opt for us to provide you with a professional cube that has been expertly set up ($25 extra one time payment so that we can purchase and set up your cube). The cube will be yours to keep. Which would you like?<br>Note: the cube we provide is the YJ MGC Elite, but set up with an optimal settings, this cube can last for more than 6 years with regular use!*
+							</label>
+                            <br>
+                            <input type="radio" class="notblank nocccube" id="campyes" name="cchoice" value="groupcccubeno" checked>
+                            <label for="campyes">I already have my own speedcube, I will use that in the camp! (no additional price)</label>
+                            <br>
+                            <input type="radio" class="notblank cccube" id="campno" name="cchoice" value="groupcccubeyes">
+                            <label for="campno">I would like to receive a professional-level cube, expertly set up! ($25 extra)</label>
+                            <br>
+                            <br>
+
+                            <div class="numberofcubes">
+                                <label for="cubes">How many cubes would you like?</label>
+                                <br>
+                                <input name="cubes" type="text" class="" id="campcubes">
+                            </div>
+
+                            <br>
+                            <br>
+
+                            <div>
+                                <h3>Addtional Information:</h3>
+                                <ul>
+                                    <li>The classes are $20 per hour.</li>
+                                    <li>There will be not be make-up classes for misses on your part, but if I cancel, there will be a make-up class.</li>
+                                    <li>Parents don't have to stay during the class.</li>
+                                    <li>If you choose to receive the cube from us, you will get it on the first class.</li>
+                                    <li>You will have to pay for the classes and/or cube on or before the first class.</li>
+                                    <li>Once ordered, the cube is not refundable.</li>
+                                    <li>If you have paid for and received a cube, it is yours forever.</li>
+                                    <li>Payment information will be given when I contact you on the provided phone number.</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" class="notblank needaccept" id="campaccept" name="accept" value="accept">
+
+                            <label for="accept">I accept all the above informations.*</label>
+                            <br>
+                            <br>
+
+                            <label for="ques">If you have any questions or comments, you can type them here:</label>
+                            <br>
+                            <textarea name="ques" id="campques" rows="4" cols="50"></textarea>
+                            <br>
+                            <br>
+                            <input name="submit" type="submit" class="" id="submit" value="Submit Camp Registration Form">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="registeritem">
+                <div class="front">
+                    <h3>Champion Cubers Group Classes</h3>
+                    <div class="registerlist">
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fal fa-users-class"></i></span>Make your own groups.</li>
+                            <li><span class="fa-li"><i class="fal fa-graduation-cap"></i></span>Includes advanced classes.</li>
+                            <li><span class="fa-li"><i class="fal fa-shapes"></i></span>Learn to master a variety of puzzles.</li>
+                            <li><span class="fa-li"><i class="fal fa-diploma"></i></span>Certificate provided.</li>
+                            <li><span class="fa-li"><i class="fal fa-infinity"></i></span>Unlimited classes.</li>
+                            <li><span class="fa-li"><i class="fal fa-users"></i></span>Make new friends</li>
+                            <li><span class="fa-li"><i class="fal fa-trophy-alt"></i></span>Train for special events like tournaments.</li>
+                            <li><span class="fa-li"><i class="bad fal fa-calendar-alt"></i></span>Group scheduling.</li>
+                            <li><span class="fa-li"><i class="bad fal fa-user"></i></span>In-person classes only.</li>
+                            <li><span class="fa-li"><i class="bad fal fa-turtle"></i></span>Starts at the group's level.</li>
+                        </ul>
+                    </div>
+                    <div class="registerfooter">
+                        <h4>$20 per hour</h4>
+                        <a class="flipper" href="#">Sign Up for a Champion Cubers Group Class</a>
+                    </div>
+                </div>
+                <div class="back">
+                    <i class="backflipper fas fa-long-arrow-left"></i>
+                    <form action="register.php" method="post" name="registercamp" id="registergroup">
+
+                        <!--<label for="grouppresent">
+							Do you have your own group of students for this class, or would you like to join an exhisting class?
+						</label>
+                        <br>
+                        <input type="radio" class="notblank" id="groupnotpresent" name="grouppresent" value="groupnotpresent" checked>
+                        <label for="groupnotpresent">I would like to join an exhisting Champion Cubers group class.</label>
+                        <br>
+                        <input type="radio" class="notblank" id="groupispresent" name="grouppresent" value="groupispresent">
+                        <label for="groupispresent">I already have a group of students for the group class.</label>
+                        <br>-->
+
+                        <div id="groupnotpresentselected">
+                            <h5><u><b>Please complete all fields marked with an asterisk (*) to continue.</b></u></h5>
+
+                            <label for="studentname">Student Name:*</label>
+                            <br>
+                            <input name="studentname" type="text" class="notblank" id="campstudentname">
+                            <br>
+                            <br>
+
+                            <label for="studentage">Student Age:*</label>
+                            <br>
+                            <input name="studentage" type="text" class="notblank numcheck" id="campstudentage">
+                            <br>
+                            <br>
+
+                            <label for="parentname">Parent Name:*</label>
+                            <br>
+                            <input name="parentname" type="text" class="notblank" id="campparentname">
+                            <br>
+                            <br>
+
+                            <label for="parentemail">Parent E-Mail:*</label>
+                            <br>
+                            <input name="parentemail" type="text" class="notblank emailcheck" id="campparentemail">
+                            <br>
+                            <br>
+
+                            <label for="parentnumber">Parent Number:*</label>
+                            <br>
+                            <input name="parentnumber" type="text" class="trigger notblank phonenumber" id="groupparentnumber">
+                            <br>
+                            <br>
+                        </div>
+
+                        <div id="groupispresentselected">
+
+                        </div>
+
+                        <div class="allrest">
+
+
+                            <label for="cchoice">
+							Each student will need to have their own 3x3x3 speedcube for the classes. We have the option for you to bring your own speedcube (no extra fees), or you can opt for us to provide you with a professional cube that has been expertly set up ($25 extra one time payment so that we can purchase and set up your cube). The cube will be yours to keep. Which would you like?<br>Note: the cube we provide is the YJ MGC Elite, but set up with an optimal settings, this cube can last for more than 6 years with regular use!*
+							</label>
+                            <br>
+                            <input type="radio" class="notblank nocccube" id="campyes" name="cchoice" value="groupcccubeno" checked>
+                            <label for="campyes">I already have my own speedcube, I will use that in the camp! (no additional price)</label>
+                            <br>
+                            <input type="radio" class="notblank cccube" id="campno" name="cchoice" value="groupcccubeyes">
+                            <label for="campno">I would like to receive a professional-level cube, expertly set up! ($25 extra)</label>
+                            <br>
+                            <br>
+
+                            <div class="numberofcubes">
+                                <label for="cubes">How many cubes would you like?</label>
+                                <br>
+                                <input name="cubes" type="text" class="" id="campcubes">
+                            </div>
+
+                            <br>
+                            <br>
+
+                            <div>
+                                <h3>Addtional Information:</h3>
+                                <ul>
+                                    <li>The classes are $20 per hour.</li>
+                                    <li>There will be not be make-up classes for misses on your part, but if I cancel, there will be a make-up class.</li>
+                                    <li>Parents don't have to stay during the class.</li>
+                                    <li>If you choose to receive the cube from us, you will get it on the first class.</li>
+                                    <li>You will have to pay for the classes and/or cube on or before the first class.</li>
+                                    <li>Once ordered, the cube is not refundable.</li>
+                                    <li>If you have paid for and received a cube, it is yours forever.</li>
+                                    <li>Payment information will be given when I contact you on the provided phone number.</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" class="notblank needaccept" id="campaccept" name="accept" value="accept">
+
+                            <label for="accept">I accept all the above informations.*</label>
+                            <br>
+                            <br>
+
+                            <label for="ques">If you have any questions or comments, you can type them here:</label>
+                            <br>
+                            <textarea name="ques" id="campques" rows="4" cols="50"></textarea>
+                            <br>
+                            <br>
+                            <input name="submit" type="submit" class="" id="submit" value="Submit Group Classes Registration Form">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="registeritem">
+                <div class="front">
+                    <h3>Champion Cubers Private Classes</h3>
+                    <div class="registerlist">
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fal fa-phone-laptop"></i></span>In-person or virtual classes.</li>
+                            <li><span class="fa-li"><i class="fal fa-clock"></i></span>Flexible time per session.</li>
+                            <li><span class="fa-li"><i class="fal fa-shapes"></i></span>Learn to master a variety of puzzles.</li>
+                            <li><span class="fa-li"><i class="fal fa-rabbit-fast"></i></span>Progress at your own level.</li>
+                            <li><span class="fa-li"><i class="fal fa-diploma"></i></span>Certificate provided.</li>
+                            <li><span class="fa-li"><i class="fal fa-infinity"></i></span>Unlimited classes.</li>
+                            <li><span class="fa-li"><i class="fal fa-graduation-cap"></i></span>Includes advanced classes.</li>
+                            <li><span class="fa-li"><i class="fal fa-trophy-alt"></i></span>Train for special events like tournaments.</li>
+                            <li><span class="fa-li"><i class="fal fa-random"></i></span>Temporarily (or permanently) join group classes at any time.</li>
+                        </ul>
+                    </div>
+                    <div class="registerfooter">
+                        <h4>$40 per hour</h4>
+                        <a class="flipper" href="#">Sign Up for a Champion Cubers Private Class</a>
+                    </div>
+                </div>
+                <div class="back">
+                    <i class="backflipper fas fa-long-arrow-left"></i>
+                    <form action="register.php" method="post" name="registercamp" id="registergroup">
+
+                        <!--<label for="grouppresent">
+							Do you have your own group of students for this class, or would you like to join an exhisting class?
+						</label>
+                        <br>
+                        <input type="radio" class="notblank" id="groupnotpresent" name="grouppresent" value="groupnotpresent" checked>
+                        <label for="groupnotpresent">I would like to join an exhisting Champion Cubers group class.</label>
+                        <br>
+                        <input type="radio" class="notblank" id="groupispresent" name="grouppresent" value="groupispresent">
+                        <label for="groupispresent">I already have a group of students for the group class.</label>
+                        <br>-->
+
+                        <div id="groupnotpresentselected">
+                            <h5><u><b>Please complete all fields marked with an asterisk (*) to continue.</b></u></h5>
+
+                            <label for="studentname">Student Name:*</label>
+                            <br>
+                            <input name="studentname" type="text" class="notblank" id="campstudentname">
+                            <br>
+                            <br>
+
+                            <label for="studentage">Student Age:*</label>
+                            <br>
+                            <input name="studentage" type="text" class="notblank numcheck" id="campstudentage">
+                            <br>
+                            <br>
+
+                            <label for="parentname">Parent Name:*</label>
+                            <br>
+                            <input name="parentname" type="text" class="notblank" id="campparentname">
+                            <br>
+                            <br>
+
+                            <label for="parentemail">Parent E-Mail:*</label>
+                            <br>
+                            <input name="parentemail" type="text" class="notblank emailcheck" id="campparentemail">
+                            <br>
+                            <br>
+
+                            <label for="parentnumber">Parent Number:*</label>
+                            <br>
+                            <input name="parentnumber" type="text" class="trigger notblank phonenumber" id="groupparentnumber">
+                            <br>
+                            <br>
+                        </div>
+
+                        <div id="groupispresentselected">
+
+                        </div>
+
+                        <div class="allrest">
+
+
+                            <label for="cchoice">
+							Each student will need to have their own 3x3x3 speedcube for the classes. We have the option for you to bring your own speedcube (no extra fees), or you can opt for us to provide you with a professional cube that has been expertly set up ($25 extra one time payment so that we can purchase and set up your cube). The cube will be yours to keep. Which would you like?<br>Note: the cube we provide is the YJ MGC Elite, but set up with an optimal settings, this cube can last for more than 6 years with regular use!*
+							</label>
+                            <br>
+                            <input type="radio" class="notblank nocccube" id="campyes" name="cchoice" value="groupcccubeno" checked>
+                            <label for="campyes">I already have my own speedcube, I will use that in the camp! (no additional price)</label>
+                            <br>
+                            <input type="radio" class="notblank cccube" id="campno" name="cchoice" value="groupcccubeyes">
+                            <label for="campno">I would like to receive a professional-level cube, expertly set up! ($25 extra)</label>
+                            <br>
+                            <br>
+
+                            <div class="numberofcubes">
+                                <label for="cubes">How many cubes would you like?</label>
+                                <br>
+                                <input name="cubes" type="text" class="" id="campcubes">
+                            </div>
+
+                            <br>
+                            <br>
+
+                            <div>
+                                <h3>Addtional Information:</h3>
+                                <ul>
+                                    <li>The classes are $20 per hour.</li>
+                                    <li>There will be not be make-up classes for misses on your part, but if I cancel, there will be a make-up class.</li>
+                                    <li>Parents don't have to stay during the class.</li>
+                                    <li>If you choose to receive the cube from us, you will get it on the first class.</li>
+                                    <li>You will have to pay for the classes and/or cube on or before the first class.</li>
+                                    <li>Once ordered, the cube is not refundable.</li>
+                                    <li>If you have paid for and received a cube, it is yours forever.</li>
+                                    <li>Payment information will be given when I contact you on the provided phone number.</li>
+                                </ul>
+                            </div>
+
+                            <input type="checkbox" class="notblank needaccept" id="campaccept" name="accept" value="accept">
+
+                            <label for="accept">I accept all the above informations.*</label>
+                            <br>
+                            <br>
+
+                            <label for="ques">If you have any questions or comments, you can type them here:</label>
+                            <br>
+                            <textarea name="ques" id="campques" rows="4" cols="50"></textarea>
+                            <br>
+                            <br>
+                            <input name="submit" type="submit" class="" id="submit" value="Submit Private Classes Registration Form">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--
+            <div class="registeritem">
+                <h3>Champion Cubers Group Classes</h3>
+                <div class="registerlist">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fal fa-users-class"></i></span>Make your own groups.</li>
+                        <li><span class="fa-li"><i class="fal fa-graduation-cap"></i></span>Includes advanced classes.</li>
+                        <li><span class="fa-li"><i class="fal fa-shapes"></i></span>Learn to master a variety of puzzles.</li>
+                        <li><span class="fa-li"><i class="fal fa-diploma"></i></span>Certificate provided.</li>
+                        <li><span class="fa-li"><i class="fal fa-infinity"></i></span>Unlimited classes.</li>
+                        <li><span class="fa-li"><i class="fal fa-users"></i></span>Make new friends</li>
+                        <li><span class="fa-li"><i class="fal fa-trophy-alt"></i></span>Train for special events like tournaments.</li>
+                        <li><span class="fa-li"><i class="bad fal fa-calendar-alt"></i></span>Group scheduling.</li>
+                        <li><span class="fa-li"><i class="bad fal fa-user"></i></span>In-person classes only.</li>
+                        <li><span class="fa-li"><i class="bad fal fa-turtle"></i></span>Starts at the group's level.</li>
+                    </ul>
+                </div>
+                <div class="registerfooter">
+                    <h4>$20 per hour</h4>
+                    <a href="#">Sign Up for a Champion Cubers Group Class (website registration coming soon; please contact to register)</a>
+                </div>
+            </div>
+            <div class="registeritem">
+                <h3>Champion Cubers Private Classes</h3>
+                <div class="registerlist">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fal fa-phone-laptop"></i></span>In-person or virtual classes.</li>
+                        <li><span class="fa-li"><i class="fal fa-clock"></i></span>Flexible time per session.</li>
+                        <li><span class="fa-li"><i class="fal fa-shapes"></i></span>Learn to master a variety of puzzles.</li>
+                        <li><span class="fa-li"><i class="fal fa-rabbit-fast"></i></span>Progress at your own level.</li>
+                        <li><span class="fa-li"><i class="fal fa-diploma"></i></span>Certificate provided.</li>
+                        <li><span class="fa-li"><i class="fal fa-infinity"></i></span>Unlimited classes.</li>
+                        <li><span class="fa-li"><i class="fal fa-graduation-cap"></i></span>Includes advanced classes.</li>
+                        <li><span class="fa-li"><i class="fal fa-trophy-alt"></i></span>Train for special events like tournaments.</li>
+                        <li><span class="fa-li"><i class="fal fa-random"></i></span>Temporarily (or permanently) join group classes at any time.</li>
+                    </ul>
+                </div>
+                <div class="registerfooter">
+                    <h4>$40 per hour</h4>
+                    <a href="#">Sign Up for a Champion Cubers Private Class (website registration coming soon; please contact to register)</a>
+                </div>
+            </div>
+		-->
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <a href="#top" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>Back to top</p>
+        <h5>Contact:</h5>
+        <h6>Call or text:
+            <a href="tel:8322125160">832-212-5160</a></h6>
+        <h6>Email:
+            <a href="mailto:championcubers@gmail.com">championcubers@gmail.com</a></h6>
+        <h6>Website: <a target="blank" href="https://championcubers.cf">https://championcubers.cf/</a></h6>
+    </footer>
+    <script src="script.js"></script>
+</body>
